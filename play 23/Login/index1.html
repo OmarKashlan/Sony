@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAclBMVEX////T0tKmpaXi4uKNjY0AAAAnJCVQTk+GhYbHx8efn58PCgwaFxgFAAA2NDURDg8jISIfHB2YmJiVlJUWFBUYFhYwLi4vLC1+fH1yb3D8/Pzu7u60tLS9vb1paGlZWFiBgIA/PT3Kysrr6+rb29tIRUZcYEnHAAAA9UlEQVR4Ad2SQ4JEQRAFs/Dq27bvf8S2u8eeWEc66bfBuHhekFCabtDTmJZtwXF18aTgKeUrC0H4tBD4IvJihE8KSUrM8xNbPCXYGRmxr2C+JOQvCE7xoQye74M/saidAEAr6Y7S5HyboaJafxDfFC60eieUjEdt14aMTrB+8ADoW2EYXQeAn8XJcEg0tTEcx83nXQ9LDWeQgsrOsg7ripDYy0g0N+Y2Q5MzIpYPgYdsX0VoHlRfDFj2PdAktxXjQZ5GGWWnAuWa3NlkmLsE2FQ0bqfc6NwBhhrI2nobzJu7VTA5uHVnVvvS+cOvmKuTPk/0X1gDxHgSBQJyiJ4AAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sony Login | Signup Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icons"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email to registration</span>
+                <input type="text" placeholder="Name" required="" id="nameinput">
+                <input type="email" placeholder="Email" required="@">
+                <input type="password" placeholder="Password" required="">
+                <button class="btn-open" id="btnopen" onclick="myFunction()">Sign Up</button>
+            </form>
+        </div>
+
+
+
+
+
+
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons social-icons-signin">
+                    <a href="#" class="icons"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email/password</span>
+                <input type="email" placeholder="Name" required id="nameinput1">
+                <input type="password" placeholder="Password" required>
+                <a href="/reset.html">Forget your Password?</a>
+                <button class="signinbt btn-open" id="btnopen1" onclick="myFunction1()">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your Personal details and load your progress</p>
+                    <button class="hidden" id="login" style="color: white; border-color: white;">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1 style="color: black;">Hello, Player!</h1>
+                    <p style="color: black;">Register with your Personal details and start earning trophies</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="modal hidden-modal" style="z-index: 99999999999;">
+        <div class="flex">
+            <img src="data:image/png;base64,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"
+                width="50px" alt="user" />
+            <button class="btn-close" id="close-btn">⨉</button>
+        </div>
+        <div>
+            <h3>Welcome to the website:<h3 id="demo">
+                    <script>function myFunction1() {
+                            var x = document.getElementById("nameinput1").value;
+                            document.getElementById("demo").innerHTML = x;
+                        }
+
+                        function myFunction() {
+                            var x = document.getElementById("nameinput").value;
+                            document.getElementById("demo").innerHTML = x;
+                        }
+                    </script>
+                </h3>
+            </h3>
+            <p>
+                If you feel that you are ready to the advanture! go to the website now.
+            </p>
+        </div>
+        <button class="btn" id="countdown-btn">Go to the website</button>
+    </section>
+    <div class="overlay hidden-modal"></div>
+
+    <script>
+        document.getElementById("countdown-btn").addEventListener("click", function () {
+            var count = 5;
+            var countdownInterval = setInterval(function () {
+                if (count === 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "../index.html"; // Replace with your desired page URL
+                } else {
+                    document.getElementById("countdown-btn").innerText = count;
+                    count--;
+                }
+            }, 1000); // 1000 milliseconds = 1 second
+        });
+
+        document.querySelector("#close-btn").addEventListener("click", function () {
+            clearInterval(countdownInterval);
+        });
+    </script>
+
+
+</body>
+
+</html>
