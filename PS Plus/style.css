@@ -1949,3 +1949,21 @@ ul li::marker {
     transform: translateY(0);
   }
 }
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (change this value based on your video's aspect ratio) */
+  overflow: hidden;
+  border-radius: 5px;
+  border: #fcc800 solid 2px;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
